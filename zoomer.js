@@ -7,32 +7,30 @@ const baseURL = 'https://api.zoom.us/v2/'
 
 // Connect to the bot
 bot.login(process.env.DISCORD_TOKEN);
-bot.on('ready', () => console.info(`Logged in as ${bot.user.tag}!`));
+bot.on('ready', () => console.info(`Logged in as ${bot.user.tag}!`))
 
 // Listen for messages
 bot.on('message', msg => {
     if (msg.content === 'ping') 
         msg.channel.send('pong');
-    if (msg.content === '/new') 
+    if (msg.content.includes('/new')) 
         createMeeting(msg)
 });
 
 // Creates a new zoom meeting
-const createMeeting = async msg => {
+const createMeeting = msg => {
     let options = {
         method: 'POST',
+        url: `${baseURL}/users/${process.env.USER_ID}/meetings`,
+        headers: {authorization: `Bearer ${process.env.ZOOM_JWT}`},
         json: {
-            topic: "Software Discussion",
+            topic: msg.content.split("/new")[1],
             type: 1,
             settings: {
                 host_video: false,
                 participant_video: false,
                 global_dial_in_countries: ["US"],
             }
-        },
-        url: `${baseURL}/users/${process.env.USER_ID}/meetings`,
-        headers: {
-            authorization: `Bearer ${process.env.ZOOM_JWT}`
         }
     };
 

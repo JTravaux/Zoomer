@@ -29,12 +29,15 @@ ZOOM_JWT=
 USER_ID=
 ```
 
-To run the bot, simply do the following
+Start the bot, like you would any Node app
 ```sh
 $ node zoomer
 ```
 
-In discord, to create a new meeting simply do the following in a channel that the bot is in:
+Discord command interface:
+  - new [topic]: Creates a meeting, optionally include a topic (defaults to "Zoom Meeting")
+
 ```sh
-/new
+/new 
+/new Software Discussion
 ```
