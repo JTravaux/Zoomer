@@ -1,0 +1,16 @@
+{
+  "name": "Zoomer",
+  "version": "1.0.0",
+  "description": "Discord bot for KSJT Enterrises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Travaux",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.1.0",
+    "request": "^2.88.0"
+  }
+}
