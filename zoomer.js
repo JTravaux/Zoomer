@@ -32,7 +32,7 @@ const createMeeting = async msg => {
         },
         url: `${baseURL}/users/${process.env.USER_ID}/meetings`,
         headers: {
-            authorization: `Bearer ${process.env.ZOOM_TOKEN}`
+            authorization: `Bearer ${process.env.ZOOM_JWT}`
         }
     };
 
