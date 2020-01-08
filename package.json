@@ -1,5 +1,5 @@
 {
-  "name": "Zoomer",
+  "name": "zoomer",
   "version": "1.0.0",
   "description": "A simple discord bot to quickly create new Zoom instant meetings",
   "main": "zoomer.js",
