@@ -1,8 +1,8 @@
 {
   "name": "Zoomer",
   "version": "1.0.0",
-  "description": "Discord bot for KSJT Enterrises",
-  "main": "index.js",
+  "description": "A simple discord bot to quickly create new Zoom instant meetings",
+  "main": "zoomer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
