@@ -35,13 +35,18 @@ const createMeeting = msg => {
     };
 
     request(options, (err, resp, body) => {
-        if(err)
+        if(err){
             console.log(err)
+            msg.channel.send(`An error has occured. Check the console for more info`)
+        }
         else 
-            msg.channel.send(`
-            > **Meeting ID:** ${body.id}
-            > **Join Link:** <${body.join_url}>
-            > **Start Link:** <${body.start_url}>
-            > **Phone Numbers:** ${body.settings.global_dial_in_numbers.map(n => n.number).join(', ')}`)
+            if (body.code === 1001 || body.code === 124)
+                msg.channel.send(`Zoom Error: ${body.message}`)
+            else 
+                msg.channel.send(`
+                > **Meeting ID:** ${body.id}
+                > **Join Link:** <${body.join_url}>
+                > **Start Link:** <${body.start_url}>
+                > **Phone Numbers:** ${body.settings.global_dial_in_numbers.map(n => n.number).join(', ')}`)
     })
 }
