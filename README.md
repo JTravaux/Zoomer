@@ -1,6 +1,8 @@
 # Zoomer
 
-Zoomer is a very simple discord bot that allows me to easily create a [Zoom](https://zoom.us) instant meeting. Upon creation, it returns
+Zoomer is a very simple discord bot that allows me to easily create a [Zoom](https://zoom.us) instant meeting. 
+
+Upon creation, it returns:
 
   - The meeting ID
   - The meeting join & start links
@@ -10,7 +12,7 @@ Zoomer is a very simple discord bot that allows me to easily create a [Zoom](htt
 
 Zoomer was developed using [Node.js](https://nodejs.org/) v10.15.0.
 
-Install the dependencies
+Install the dependencies:
 
 ```sh
 $ cd Zoomer
@@ -29,7 +31,7 @@ ZOOM_JWT=
 USER_ID=
 ```
 
-Start the bot, like you would any Node app
+Start the bot, like you would any Node app:
 ```sh
 $ node zoomer
 ```
